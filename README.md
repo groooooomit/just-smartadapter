@@ -1,2 +1,2 @@
-# just-recyclerview
- A RecyclerView library on android.
+# just-smartadapter
+ A RecyclerView Common Adapter library.
