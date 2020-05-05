@@ -1,0 +1,3 @@
+rootProject.name='JustSmartAdapter'
+include ':app'
+include ':just-smartadapter'
