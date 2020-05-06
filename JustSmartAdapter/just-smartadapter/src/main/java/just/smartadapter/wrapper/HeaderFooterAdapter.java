@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 
-public class HeaderAndFooterWrapper extends AdapterWrapper {
+public class HeaderFooterAdapter extends AdapterWrapper {
     private static final int BASE_ITEM_TYPE_HEADER = -10000;
     private static final int BASE_ITEM_TYPE_FOOTER = -20000;
 
@@ -20,7 +20,7 @@ public class HeaderAndFooterWrapper extends AdapterWrapper {
     // footer set
     private SparseArrayCompat<View> footers = new SparseArrayCompat<>();
 
-    public HeaderAndFooterWrapper(@NonNull RecyclerView.Adapter originAdapter) {
+    public HeaderFooterAdapter(@NonNull RecyclerView.Adapter originAdapter) {
         super(originAdapter);
     }
 

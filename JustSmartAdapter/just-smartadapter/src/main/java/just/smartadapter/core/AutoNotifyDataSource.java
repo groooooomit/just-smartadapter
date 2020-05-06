@@ -11,7 +11,7 @@ import just.smartadapter.SmartAdapter;
 /**
  * 数据源执行操作后，同时触发 adapter 更新，采用装饰器模式
  */
-public class ObservableDataSourceWrapper<E> implements SmartAdapter.DataSource<E> {
+public class AutoNotifyDataSource<E> implements SmartAdapter.DataSource<E> {
 
     @NonNull
     private final SmartAdapter.DataSource<E> originDataSource;
@@ -19,7 +19,7 @@ public class ObservableDataSourceWrapper<E> implements SmartAdapter.DataSource<E
     @NonNull
     private final List<AdapterNotifierOwner> adapterNotifierOwners = new ArrayList<>();
 
-    public ObservableDataSourceWrapper(@NonNull SmartAdapter.DataSource<E> originDataSource) {
+    public AutoNotifyDataSource(@NonNull SmartAdapter.DataSource<E> originDataSource) {
         this.originDataSource = originDataSource;
     }
 

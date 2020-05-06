@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import just.smartadapter.SmartAdapter
 import just.smartadapter.core.ListDataSource
-import just.smartadapter.core.ObservableDataSourceWrapper
-import just.smartadapter.wrapper.HeaderAndFooterWrapper
+import just.smartadapter.core.AutoNotifyDataSource
+import just.smartadapter.wrapper.HeaderFooterAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         private const val SPAN_COUNT = 4
     }
 
-    private val dataSource = ObservableDataSourceWrapper(ListDataSource(ArrayList<Item>()))
+    private val dataSource = AutoNotifyDataSource(ListDataSource(ArrayList<Item>()))
     private val dataAdapter = SmartAdapter.newBuilder(dataSource)
         /* 标题类型. */
         .type()
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, person.name, Toast.LENGTH_SHORT).show()
         }
         .build()
-        .let { HeaderAndFooterWrapper(it) }
+        .let { HeaderFooterAdapter(it) }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,9 +58,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         /* 初始化 recyclerView. */
-        recyclerView.layoutManager = GridLayoutManager(this, SPAN_COUNT)
+        recyclerView.setOnLoadMoreListener { Toast.makeText(this@MainActivity,"load more",Toast.LENGTH_SHORT).show() }
 
         /* 如果 ViewGroup 是 RecyclerView，需要在 RecyclerView 设置完 LayoutManager 后再调用 inflate */
+        recyclerView.layoutManager = GridLayoutManager(this, SPAN_COUNT)
         val header1 = LayoutInflater.from(this).inflate(R.layout.layout_header, recyclerView, false)
         val header2 = LayoutInflater.from(this).inflate(R.layout.layout_header, recyclerView, false)
         val header3 = LayoutInflater.from(this).inflate(R.layout.layout_header, recyclerView, false)
