@@ -46,6 +46,7 @@ ext {
     gitUrl              = 'https://github.com/groooooomit/just-smartadapter.git'
     siteUrl             = 'https://github.com/groooooomit/just-smartadapter'
 
+    pom_packaging       = 'aar'
     pom_groupId         = 'com.bfu'
     pom_artifactId      = 'just-smartadapter'
     pom_name            = 'just-smartadapter'
