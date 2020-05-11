@@ -3,6 +3,6 @@
  
 ## 在 AndroidStudio 项目中使用
 ```gradle
-implementation 'com.bfu:just-smartadapter:1.0.2'
+implementation 'com.bfu:just-smartadapter:1.0.4'
 ```
 
