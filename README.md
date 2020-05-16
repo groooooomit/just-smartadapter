@@ -1,12 +1,12 @@
-# just-smartadapter
- 一个支持多 ItemType 的 RecyclerView adapter.
+# SmartAdapter
+ 支持多 ItemType 的 RecyclerView 万能 adapter.
  
 ## 添加到你的项目
 ```gradle
 implementation 'com.bfu:just-smartadapter:1.0.4'
 ```
 ## 开始使用
-* api 说明
+* [SmartAdapter](https://github.com/groooooomit/just-smartadapter/blob/master/JustSmartAdapter/just-smartadapter/src/main/java/just/smartadapter/SmartAdapter.java) 构建说明
 ```kotlin
 SmartAdapter
     
@@ -61,3 +61,15 @@ SmartAdapter
     ...
     .build()
 ```
+* 添加 Header 和 Footer
+> 想要为 adapter 添加 Header 和 Footer，不用修改原来的任何代码，只需要使用 [HeaderFooterAdapter](https://github.com/groooooomit/just-smartadapter/blob/master/JustSmartAdapter/just-smartadapter/src/main/java/just/smartadapter/wrapper/HeaderFooterAdapter.java) 包装一下 SmartAdapter 即可
+```kotlin
+    val adapter = HeaderFooterAdapter(smartAdapter);
+    adapter.addHeader(header1)
+    adapter.addHeader(header2)
+    adapter.addFooter(footer1)
+    adapter.addFooter(footer2)
+    recyclerView.adapter = headerFooterAdapter
+```
+* 具体使用方法请看 [这里](https://github.com/groooooomit/just-smartadapter/blob/master/JustSmartAdapter/app/src/main/java/com/bfu/just/smartadapter/MainActivity.kt)
+
