@@ -71,5 +71,7 @@ SmartAdapter
     adapter.addFooter(footer2)
     recyclerView.adapter = headerFooterAdapter
 ```
-* 具体使用方法请看 [这里](https://github.com/groooooomit/just-smartadapter/blob/master/JustSmartAdapter/app/src/main/java/com/bfu/just/smartadapter/MainActivity.kt)
+* 具体使用方法请看 [这里](https://github.com/groooooomit/just-smartadapter/blob/master/JustSmartAdapter/app/src/main/java/com/bfu/just/smartadapter/MainActivity.kt)  
+  
+    ![SmartAdapter](https://raw.githubusercontent.com/groooooomit/just-smartadapter/master/screenshots/smartadapter.gif "SmartAdapter")
 
