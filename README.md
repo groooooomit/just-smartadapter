@@ -64,11 +64,11 @@ SmartAdapter
 * 添加 Header 和 Footer
 > 想要为 adapter 添加 Header 和 Footer，不用修改原来的任何代码，只需要使用 [HeaderFooterAdapter](https://github.com/groooooomit/just-smartadapter/blob/master/JustSmartAdapter/just-smartadapter/src/main/java/just/smartadapter/wrapper/HeaderFooterAdapter.java) 包装一下 SmartAdapter 即可
 ```kotlin
-    val adapter = HeaderFooterAdapter(smartAdapter);
-    adapter.addHeader(header1)
-    adapter.addHeader(header2)
-    adapter.addFooter(footer1)
-    adapter.addFooter(footer2)
+    val headerFooterAdapter = HeaderFooterAdapter(smartAdapter);
+    headerFooterAdapter.addHeader(header1)
+    headerFooterAdapter.addHeader(header2)
+    headerFooterAdapter.addFooter(footer1)
+    headerFooterAdapter.addFooter(footer2)
     recyclerView.adapter = headerFooterAdapter
 ```
 * 具体使用方法请看 [这里](https://github.com/groooooomit/just-smartadapter/blob/master/JustSmartAdapter/app/src/main/java/com/bfu/just/smartadapter/MainActivity.kt)  
